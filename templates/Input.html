@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title>Wikipedia Web Scrapping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="/"><b>Search for feedback</b></a>
+            </li>
+        </ul>
+        </nav>
+        <div class="content">
+            <br>
+            <h1 style="text-align: center"><i>Search for the Topic.</i></h1><br>
+             <div class="form">
+                <form action="/getData" method="POST">
+                    <label><b>Enter topic to be searched in wiki:</b></label> <input type="text" name="content" id="content" ><br><br>
+                    <input type="submit" value="Search">
+                </form>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

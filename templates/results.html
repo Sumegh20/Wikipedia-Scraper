@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Result Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+      h1 {text-align: center;}
+      h3 {text-align: left;}
+  </style>
+</head>
+
+<body>
+    <h1>{{data['result']['Topic']}}</h1><br><hr>
+
+    <h3> Summary Text </h3>
+    <p>
+        {{data['result']['Summary_text']}}
+    </p>
+    <br><hr>
+
+    <h3>Images</h3>
+    {%for image in data['result']['Images']%}
+    <img src={{image}}>
+    {%endfor%}
+    <br><hr>
+
+    <h3>References</h3>
+    {%for ref in data['result']['References']%}
+    <a href={{ref}}>{{ref}}</a>
+    {%endfor%}
+</body>
+</html>
